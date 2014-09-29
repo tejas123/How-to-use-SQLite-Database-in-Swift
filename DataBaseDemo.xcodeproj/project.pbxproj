@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDADB989199092F100C750CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADB988199092F100C750CE /* AppDelegate.swift */; };
+		EDADB98E199092F100C750CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDADB98C199092F100C750CE /* Main.storyboard */; };
+		EDADB990199092F100C750CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDADB98F199092F100C750CE /* Images.xcassets */; };
+		EDADB99C199092F100C750CE /* DataBaseDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADB99B199092F100C750CE /* DataBaseDemoTests.swift */; };
+		EDADB9A71990A90200C750CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADB9A61990A90200C750CE /* ViewController.swift */; };
+		EDADB9BB1990AF4600C750CE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDADB9BA1990AF4600C750CE /* libsqlite3.0.dylib */; };
+		EDADB9C11990B09E00C750CE /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADB9C01990B09E00C750CE /* ModelManager.swift */; };
+		EDADB9C31990B0BF00C750CE /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADB9C21990B0BF00C750CE /* StudentInfo.swift */; };
+		EDADB9C51990B20C00C750CE /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDADB9C41990B20C00C750CE /* Util.swift */; };
+		EDADB9C71990B29700C750CE /* DataBaseDemo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EDADB9C61990B29700C750CE /* DataBaseDemo.sqlite */; };
+		EDADB9D01990B76F00C750CE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EDADB9CA1990B76F00C750CE /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EDADB9D11990B76F00C750CE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EDADB9CC1990B76F00C750CE /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EDADB9D21990B76F00C750CE /* fmdb.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDADB9CD1990B76F00C750CE /* fmdb.txt */; };
+		EDADB9D31990B76F00C750CE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EDADB9CF1990B76F00C750CE /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDADB996199092F100C750CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDADB97B199092F100C750CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDADB982199092F100C750CE;
+			remoteInfo = DataBaseDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDADB983199092F100C750CE /* DataBaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataBaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDADB987199092F100C750CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDADB988199092F100C750CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDADB98D199092F100C750CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDADB98F199092F100C750CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EDADB995199092F100C750CE /* DataBaseDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataBaseDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDADB99A199092F100C750CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDADB99B199092F100C750CE /* DataBaseDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseDemoTests.swift; sourceTree = "<group>"; };
+		EDADB9A61990A90200C750CE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDADB9BA1990AF4600C750CE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		EDADB9BD1990AF7500C750CE /* DataBaseDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DataBaseDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		EDADB9C01990B09E00C750CE /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		EDADB9C21990B0BF00C750CE /* StudentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInfo.swift; sourceTree = "<group>"; };
+		EDADB9C41990B20C00C750CE /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		EDADB9C61990B29700C750CE /* DataBaseDemo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DataBaseDemo.sqlite; sourceTree = "<group>"; };
+		EDADB9C91990B76F00C750CE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		EDADB9CA1990B76F00C750CE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		EDADB9CB1990B76F00C750CE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		EDADB9CC1990B76F00C750CE /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		EDADB9CD1990B76F00C750CE /* fmdb.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fmdb.txt; sourceTree = "<group>"; };
+		EDADB9CE1990B76F00C750CE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		EDADB9CF1990B76F00C750CE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDADB980199092F100C750CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDADB9BB1990AF4600C750CE /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDADB992199092F100C750CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDADB97A199092F100C750CE = {
+			isa = PBXGroup;
+			children = (
+				EDADB9BA1990AF4600C750CE /* libsqlite3.0.dylib */,
+				EDADB985199092F100C750CE /* DataBaseDemo */,
+				EDADB998199092F100C750CE /* DataBaseDemoTests */,
+				EDADB984199092F100C750CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDADB984199092F100C750CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB983199092F100C750CE /* DataBaseDemo.app */,
+				EDADB995199092F100C750CE /* DataBaseDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDADB985199092F100C750CE /* DataBaseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB988199092F100C750CE /* AppDelegate.swift */,
+				EDADB98C199092F100C750CE /* Main.storyboard */,
+				EDADB9BC1990AF7500C750CE /* Model */,
+				EDADB9A51990A90200C750CE /* View */,
+				EDADB9A81990ACA300C750CE /* ThirdParty */,
+				EDADB98F199092F100C750CE /* Images.xcassets */,
+				EDADB986199092F100C750CE /* Supporting Files */,
+			);
+			path = DataBaseDemo;
+			sourceTree = "<group>";
+		};
+		EDADB986199092F100C750CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB987199092F100C750CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDADB998199092F100C750CE /* DataBaseDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB99B199092F100C750CE /* DataBaseDemoTests.swift */,
+				EDADB999199092F100C750CE /* Supporting Files */,
+			);
+			path = DataBaseDemoTests;
+			sourceTree = "<group>";
+		};
+		EDADB999199092F100C750CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB99A199092F100C750CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDADB9A51990A90200C750CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB9A61990A90200C750CE /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDADB9A81990ACA300C750CE /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB9C81990B76F00C750CE /* FMDB */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		EDADB9BC1990AF7500C750CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB9C61990B29700C750CE /* DataBaseDemo.sqlite */,
+				EDADB9BD1990AF7500C750CE /* DataBaseDemo-Bridging-Header.h */,
+				EDADB9C41990B20C00C750CE /* Util.swift */,
+				EDADB9C01990B09E00C750CE /* ModelManager.swift */,
+				EDADB9C21990B0BF00C750CE /* StudentInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDADB9C81990B76F00C750CE /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				EDADB9C91990B76F00C750CE /* FMDatabase.h */,
+				EDADB9CA1990B76F00C750CE /* FMDatabase.m */,
+				EDADB9CB1990B76F00C750CE /* FMDatabaseAdditions.h */,
+				EDADB9CC1990B76F00C750CE /* FMDatabaseAdditions.m */,
+				EDADB9CD1990B76F00C750CE /* fmdb.txt */,
+				EDADB9CE1990B76F00C750CE /* FMResultSet.h */,
+				EDADB9CF1990B76F00C750CE /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDADB982199092F100C750CE /* DataBaseDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDADB99F199092F100C750CE /* Build configuration list for PBXNativeTarget "DataBaseDemo" */;
+			buildPhases = (
+				EDADB97F199092F100C750CE /* Sources */,
+				EDADB980199092F100C750CE /* Frameworks */,
+				EDADB981199092F100C750CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataBaseDemo;
+			productName = DataBaseDemo;
+			productReference = EDADB983199092F100C750CE /* DataBaseDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDADB994199092F100C750CE /* DataBaseDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDADB9A2199092F100C750CE /* Build configuration list for PBXNativeTarget "DataBaseDemoTests" */;
+			buildPhases = (
+				EDADB991199092F100C750CE /* Sources */,
+				EDADB992199092F100C750CE /* Frameworks */,
+				EDADB993199092F100C750CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDADB997199092F100C750CE /* PBXTargetDependency */,
+			);
+			name = DataBaseDemoTests;
+			productName = DataBaseDemoTests;
+			productReference = EDADB995199092F100C750CE /* DataBaseDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDADB97B199092F100C750CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = TheAppGuruz;
+				TargetAttributes = {
+					EDADB982199092F100C750CE = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					EDADB994199092F100C750CE = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = EDADB982199092F100C750CE;
+					};
+				};
+			};
+			buildConfigurationList = EDADB97E199092F100C750CE /* Build configuration list for PBXProject "DataBaseDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDADB97A199092F100C750CE;
+			productRefGroup = EDADB984199092F100C750CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDADB982199092F100C750CE /* DataBaseDemo */,
+				EDADB994199092F100C750CE /* DataBaseDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDADB981199092F100C750CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDADB98E199092F100C750CE /* Main.storyboard in Resources */,
+				EDADB9C71990B29700C750CE /* DataBaseDemo.sqlite in Resources */,
+				EDADB990199092F100C750CE /* Images.xcassets in Resources */,
+				EDADB9D21990B76F00C750CE /* fmdb.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDADB993199092F100C750CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDADB97F199092F100C750CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDADB9C31990B0BF00C750CE /* StudentInfo.swift in Sources */,
+				EDADB9C11990B09E00C750CE /* ModelManager.swift in Sources */,
+				EDADB9A71990A90200C750CE /* ViewController.swift in Sources */,
+				EDADB9D01990B76F00C750CE /* FMDatabase.m in Sources */,
+				EDADB989199092F100C750CE /* AppDelegate.swift in Sources */,
+				EDADB9D11990B76F00C750CE /* FMDatabaseAdditions.m in Sources */,
+				EDADB9D31990B76F00C750CE /* FMResultSet.m in Sources */,
+				EDADB9C51990B20C00C750CE /* Util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDADB991199092F100C750CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDADB99C199092F100C750CE /* DataBaseDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDADB997199092F100C750CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDADB982199092F100C750CE /* DataBaseDemo */;
+			targetProxy = EDADB996199092F100C750CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDADB98C199092F100C750CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDADB98D199092F100C750CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDADB99D199092F100C750CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDADB99E199092F100C750CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDADB9A0199092F100C750CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = DataBaseDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataBaseDemo/Model/DataBaseDemo-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		EDADB9A1199092F100C750CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = DataBaseDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataBaseDemo/Model/DataBaseDemo-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		EDADB9A3199092F100C750CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DataBaseDemo.app/DataBaseDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DataBaseDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		EDADB9A4199092F100C750CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DataBaseDemo.app/DataBaseDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DataBaseDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDADB97E199092F100C750CE /* Build configuration list for PBXProject "DataBaseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDADB99D199092F100C750CE /* Debug */,
+				EDADB99E199092F100C750CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDADB99F199092F100C750CE /* Build configuration list for PBXNativeTarget "DataBaseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDADB9A0199092F100C750CE /* Debug */,
+				EDADB9A1199092F100C750CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDADB9A2199092F100C750CE /* Build configuration list for PBXNativeTarget "DataBaseDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDADB9A3199092F100C750CE /* Debug */,
+				EDADB9A4199092F100C750CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDADB97B199092F100C750CE /* Project object */;
+}
