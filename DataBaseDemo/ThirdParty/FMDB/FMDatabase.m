@@ -767,7 +767,7 @@
 
 - (void)setUseCount:(long)value {
     if (useCount != value) {
-        useCount = value;
+        useCount = (int)value;
     }
 }
 
