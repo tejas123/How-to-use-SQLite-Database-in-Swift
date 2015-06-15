@@ -19,9 +19,19 @@ class Util: NSObject {
         var fileManager = NSFileManager.defaultManager()
         if !fileManager.fileExistsAtPath(dbPath) {
             var fromPath: String? = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent(fileName as String)
-            fileManager.copyItemAtPath(fromPath!, toPath: dbPath, error: nil)
-//            var fromPath: NSString = NSBundle.mainBundle().resourcePath.stringByAppendingPathComponent(fileName)
-//            fileManager.copyItemAtPath(fromPath, toPath: dbPath, error: nil)
+            var error : NSError?
+            fileManager.copyItemAtPath(fromPath!, toPath: dbPath, error: &error)
+            var alert: UIAlertView = UIAlertView()
+            if (error != nil) {
+                alert.title = "Error Occured"
+                alert.message = error?.localizedDescription
+            } else {
+                alert.title = "Successfully Copy"
+                alert.message = "Your database copy successfully"
+            }
+            alert.delegate = nil
+            alert.addButtonWithTitle("Ok")
+            alert.show()
         }
     }
     
