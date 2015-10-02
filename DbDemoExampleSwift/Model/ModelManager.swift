@@ -46,11 +46,11 @@ class ModelManager: NSObject {
 
     func getAllStudentData() -> NSMutableArray {
         sharedInstance.database!.open()
-        var resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM student_info", withArgumentsInArray: nil)
-        var marrStudentInfo : NSMutableArray = NSMutableArray()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM student_info", withArgumentsInArray: nil)
+        let marrStudentInfo : NSMutableArray = NSMutableArray()
         if (resultSet != nil) {
             while resultSet.next() {
-                var studentInfo : StudentInfo = StudentInfo()
+                let studentInfo : StudentInfo = StudentInfo()
                 studentInfo.RollNo = resultSet.stringForColumn("RollNo")
                 studentInfo.Name = resultSet.stringForColumn("Name")
                 studentInfo.Marks = resultSet.stringForColumn("Marks")

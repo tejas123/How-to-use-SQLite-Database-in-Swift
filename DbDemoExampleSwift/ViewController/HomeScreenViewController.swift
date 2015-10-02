@@ -43,8 +43,8 @@ class HomeScreenViewController: UIViewController , UITableViewDataSource,UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:StudentCell = tableView.dequeueReusableCellWithIdentifier("cell") as! StudentCell
-        var student:StudentInfo = marrStudentData.objectAtIndex(indexPath.row) as! StudentInfo
+        let cell:StudentCell = tableView.dequeueReusableCellWithIdentifier("cell") as! StudentCell
+        let student:StudentInfo = marrStudentData.objectAtIndex(indexPath.row) as! StudentInfo
         cell.lblContent.text = "Name : \(student.Name)  \n  Marks : \(student.Marks)"
         cell.btnDelete.tag = indexPath.row
         cell.btnEdit.tag = indexPath.row
@@ -54,10 +54,10 @@ class HomeScreenViewController: UIViewController , UITableViewDataSource,UITable
     //MARK: UIButton Action methods
 
     @IBAction func btnDeleteClicked(sender: AnyObject) {
-        var btnDelete : UIButton = sender as! UIButton
-        var selectedIndex : Int = btnDelete.tag
-        var studentInfo: StudentInfo = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
-        var isDeleted = ModelManager.getInstance().deleteStudentData(studentInfo)
+        let btnDelete : UIButton = sender as! UIButton
+        let selectedIndex : Int = btnDelete.tag
+        let studentInfo: StudentInfo = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
+        let isDeleted = ModelManager.getInstance().deleteStudentData(studentInfo)
         if isDeleted {
             Util.invokeAlertMethod("", strBody: "Record deleted successfully.", delegate: nil)
         } else {
@@ -76,9 +76,9 @@ class HomeScreenViewController: UIViewController , UITableViewDataSource,UITable
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "editSegue")
         {
-            var btnEdit : UIButton = sender as! UIButton
-            var selectedIndex : Int = btnEdit.tag
-            var viewController : InsertRecordViewController = segue.destinationViewController as! InsertRecordViewController
+            let btnEdit : UIButton = sender as! UIButton
+            let selectedIndex : Int = btnEdit.tag
+            let viewController : InsertRecordViewController = segue.destinationViewController as! InsertRecordViewController
             viewController.isEdit = true
             viewController.studentData = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
         }

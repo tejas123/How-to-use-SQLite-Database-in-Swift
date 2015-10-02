@@ -52,11 +52,11 @@ class InsertRecordViewController: UIViewController {
         {
             if(isEdit)
             {
-                var studentInfo: StudentInfo = StudentInfo()
+                let studentInfo: StudentInfo = StudentInfo()
                 studentInfo.RollNo = studentData.RollNo
-                studentInfo.Name = txtName.text
-                studentInfo.Marks = txtMarks.text
-                var isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
+                studentInfo.Name = txtName.text!
+                studentInfo.Marks = txtMarks.text!
+                let isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
                 if isUpdated {
                     Util.invokeAlertMethod("", strBody: "Record updated successfully.", delegate: nil)
                 } else {
@@ -65,10 +65,10 @@ class InsertRecordViewController: UIViewController {
             }
             else
             {
-                var studentInfo: StudentInfo = StudentInfo()
-                studentInfo.Name = txtName.text
-                studentInfo.Marks = txtMarks.text
-                var isInserted = ModelManager.getInstance().addStudentData(studentInfo)
+                let studentInfo: StudentInfo = StudentInfo()
+                studentInfo.Name = txtName.text!
+                studentInfo.Marks = txtMarks.text!
+                let isInserted = ModelManager.getInstance().addStudentData(studentInfo)
                 if isInserted {
                     Util.invokeAlertMethod("", strBody: "Record Inserted successfully.", delegate: nil)
                 } else {

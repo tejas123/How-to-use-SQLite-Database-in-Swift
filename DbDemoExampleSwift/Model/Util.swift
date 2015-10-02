@@ -10,18 +10,29 @@ import UIKit
 
 class Util: NSObject {
     
-    class func getPath(fileName: String) -> String {        
-        return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0].stringByAppendingPathComponent(fileName)
+    class func getPath(fileName: String) -> String {
+        
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent(fileName)
+        
+        return fileURL.path!
     }
     
     class func copyFile(fileName: NSString) {
-        var dbPath: String = getPath(fileName as String)
-        var fileManager = NSFileManager.defaultManager()
+        let dbPath: String = getPath(fileName as String)
+        let fileManager = NSFileManager.defaultManager()
         if !fileManager.fileExistsAtPath(dbPath) {
-            var fromPath: String? = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent(fileName as String)
+            
+            let documentsURL = NSBundle.mainBundle().resourceURL
+            let fromPath = documentsURL!.URLByAppendingPathComponent(fileName as String)
+            
             var error : NSError?
-            fileManager.copyItemAtPath(fromPath!, toPath: dbPath, error: &error)
-            var alert: UIAlertView = UIAlertView()
+            do {
+                try fileManager.copyItemAtPath(fromPath.path!, toPath: dbPath)
+            } catch let error1 as NSError {
+                error = error1
+            }
+            let alert: UIAlertView = UIAlertView()
             if (error != nil) {
                 alert.title = "Error Occured"
                 alert.message = error?.localizedDescription
@@ -36,7 +47,7 @@ class Util: NSObject {
     }
     
     class func invokeAlertMethod(strTitle: NSString, strBody: NSString, delegate: AnyObject?) {
-        var alert: UIAlertView = UIAlertView()
+        let alert: UIAlertView = UIAlertView()
         alert.message = strBody as String
         alert.title = strTitle as String
         alert.delegate = delegate

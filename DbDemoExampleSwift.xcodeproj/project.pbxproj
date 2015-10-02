@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA977B9C1B871ECC0000B3BC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD5F4EA1B7A074A00EBC695 /* libsqlite3.0.dylib */; };
+		4C971E121BBE4BA7008411F6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C971E111BBE4BA6008411F6 /* libsqlite3.0.tbd */; };
 		EAD5F4CB1B7A073200EBC695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5F4CA1B7A073200EBC695 /* AppDelegate.swift */; };
 		EAD5F4D01B7A073200EBC695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD5F4CE1B7A073200EBC695 /* Main.storyboard */; };
 		EAD5F4D21B7A073200EBC695 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD5F4D11B7A073200EBC695 /* Images.xcassets */; };
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C971E111BBE4BA6008411F6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		EAD5F4C51B7A073200EBC695 /* DbDemoExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DbDemoExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD5F4C91B7A073200EBC695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAD5F4CA1B7A073200EBC695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		EAD5F4DA1B7A073200EBC695 /* DbDemoExampleSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DbDemoExampleSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD5F4DF1B7A073200EBC695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAD5F4E01B7A073200EBC695 /* DbDemoExampleSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbDemoExampleSwiftTests.swift; sourceTree = "<group>"; };
-		EAD5F4EA1B7A074A00EBC695 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EAD5F4FF1B7A080700EBC695 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		EAD5F5001B7A080700EBC695 /* StudentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInfo.swift; sourceTree = "<group>"; };
 		EAD5F5011B7A080700EBC695 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA977B9C1B871ECC0000B3BC /* libsqlite3.0.dylib in Frameworks */,
+				4C971E121BBE4BA7008411F6 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		EAD5F4BC1B7A073200EBC695 = {
 			isa = PBXGroup;
 			children = (
-				EAD5F4EA1B7A074A00EBC695 /* libsqlite3.0.dylib */,
+				4C971E111BBE4BA6008411F6 /* libsqlite3.0.tbd */,
 				EAD5F4C71B7A073200EBC695 /* DbDemoExampleSwift */,
 				EAD5F4DD1B7A073200EBC695 /* DbDemoExampleSwiftTests */,
 				EAD5F4C61B7A073200EBC695 /* Products */,
@@ -238,7 +238,9 @@
 		EAD5F4BD1B7A073200EBC695 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "TheAppGuruz-New-6";
 				TargetAttributes = {
 					EAD5F4C41B7A073200EBC695 = {
@@ -368,6 +370,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -436,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DbDemoExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tag.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./DbDemoExampleSwift/DbDemoExampleSwift-Bridging-Header.h";
 			};
@@ -447,6 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DbDemoExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tag.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./DbDemoExampleSwift/DbDemoExampleSwift-Bridging-Header.h";
 			};
@@ -466,6 +471,7 @@
 				);
 				INFOPLIST_FILE = DbDemoExampleSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tag.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DbDemoExampleSwift.app/DbDemoExampleSwift";
 			};
@@ -481,6 +487,7 @@
 				);
 				INFOPLIST_FILE = DbDemoExampleSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tag.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DbDemoExampleSwift.app/DbDemoExampleSwift";
 			};
